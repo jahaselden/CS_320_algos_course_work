@@ -1,1 +1,1 @@
-# CS320_algos_course_work
+# CS 320 Algorithms and Theory
