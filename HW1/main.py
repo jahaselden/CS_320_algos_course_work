@@ -36,8 +36,8 @@ def find_palindrome(pattern):
         if pattern_list[right] == ' ':
             right -= 1
 
-        print('left element:', pattern_list[left])
-        print('right element:', pattern_list[right])
+        # print('left element:', pattern_list[left])
+        # print('right element:', pattern_list[right])
         # print('left:', left)
         # print('right:', right)
         # print('removed:', removed)
@@ -68,17 +68,22 @@ def find_palindrome(pattern):
     return pattern
 
 
-print('example 1:', find_palindrome((1, 2)), 'expected: None') 
-print('example 2:', find_palindrome((1, 2, 3, 2, 1)), 'expected: ( 1 2 2 1 )')
-print('example 3:', find_palindrome((1, 2, 3, 4)), 'expected: None' )
-print('example 4:', find_palindrome((1, 2, 3, 2, 4, 1)), 'expected: ( 1 2 3 2 1 )')
+# print('example 1:', find_palindrome((1, 2)), 'expected: None') 
+# print('example 2:', find_palindrome((1, 2, 3, 2, 1)), 'expected: ( 1 2 2 1 )')
+# print('example 3:', find_palindrome((1, 2, 3, 4)), 'expected: None' )
+# print('example 4:', find_palindrome((1, 2, 3, 2, 4, 1)), 'expected: ( 1 2 3 2 1 )')
 # print('example 5:', find_palindrome((1, 2, 3, 4, 2, 1)), 'expected: ( 1 2 4 2 1 )')
 # print('example 6:', find_palindrome(('c', 'i', 'v', 'i', 'c')), 'expected: ( c i i c )')
 # print('example 7:', find_palindrome(('a', 1, 2, 2, 1, 'a')), 'expected: ( a 1 2 1 a )')
 
-input8 = tuple("Ma is as selfless as I am")
-print(input8)
-print('example 8:', find_palindrome(input8), 'expected: ( ? )')
+# input8 = tuple("Ma is as selfless as I am")
+# print(input8)
+# print('example 8:', find_palindrome(input8), 'expected: ( ? )')
+
+# input8b = tuple("ma is as selfless as i am")
+# print(input8b)
+# print('example 8b:', find_palindrome(input8b), 'expected: ( m a  i s  a s  s e l f l e s s  a s  i  a m )')
+
 
 # print('example 9:', find_palindrome("string"), 'expected: None')
 # print('example 10:', find_palindrome(["this", "is", "not", "a", "tuple"]), 'expected: None')
