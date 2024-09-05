@@ -46,7 +46,7 @@ def find_palindrome(pattern):
             elif pattern[left] == pattern[right - 1]:
                 delete = right
             else:                       # There is no possible palindrome with one removal
-                return None         # this isn't returning none!? maybe??
+                return None             # this isn't returning none!? maybe??
             
             removed += 1
 
