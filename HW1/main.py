@@ -29,7 +29,7 @@ def find_palindrome(pattern):
     right = length - 1
     removed = 0
 
-    while left <= right and removed <= 1:
+    while left <= right and removed < 1:
         if pattern_list[left] == ' ':
             left += 1
 
@@ -42,7 +42,7 @@ def find_palindrome(pattern):
         # print('right:', right)
         # print('removed:', removed)
 
-        if pattern_list[left] == pattern_list[right]:       
+        if pattern_list[left] == pattern_list[right]:   # Match? Move inward to next comparison    
             left += 1
             right -= 1
         else:
