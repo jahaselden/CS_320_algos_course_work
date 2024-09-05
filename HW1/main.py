@@ -60,6 +60,7 @@ def find_palindrome(pattern):
     pattern = tuple(pattern_list)
     return pattern
 
+
 # print('example 1:', find_palindrome((1, 2)), 'expected: None') 
 # print('example 2:', find_palindrome((1, 2, 3, 2, 1)), 'expected: ( 1 2 2 1 )')
 # print('example 3:', find_palindrome((1, 2, 3, 4)), 'expected: None' )
