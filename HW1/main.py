@@ -6,6 +6,7 @@ import math
 
 # Subroutines if any, go here
 
+
 def tuple_arg(input):
     if isinstance(input, tuple):
         return True
@@ -30,17 +31,11 @@ def find_palindrome(pattern):
     removed = 0
 
     while left <= right and removed < 1:
-        if pattern_list[left] == ' ':
-            left += 1
+        # if pattern_list[left] == ' ':
+        #     left += 1
 
-        if pattern_list[right] == ' ':
-            right -= 1
-
-        # print('left element:', pattern_list[left])
-        # print('right element:', pattern_list[right])
-        # print('left:', left)
-        # print('right:', right)
-        # print('removed:', removed)
+        # if pattern_list[right] == ' ':
+        #     right -= 1
 
         if pattern_list[left] == pattern_list[right]:   # Match? Move inward to next comparison    
             left += 1
@@ -48,16 +43,14 @@ def find_palindrome(pattern):
         else:
             if left + 1 == right:       # Remove middle to make palindrome, pattern is even
                 del pattern_list[left]
-                removed += 1
             elif pattern_list[left + 1] == pattern_list[right]:
                 del pattern_list[left]
-                removed += 1
             elif pattern_list[left] == pattern_list[right - 1]:
                 del pattern_list[right]
-                removed += 1
             else:                       # There is no possible palindrome with one removal
                 return None
 
+            removed += 1
             left += 1
             right -= 1
 
@@ -66,7 +59,6 @@ def find_palindrome(pattern):
 
     pattern = tuple(pattern_list)
     return pattern
-
 
 # print('example 1:', find_palindrome((1, 2)), 'expected: None') 
 # print('example 2:', find_palindrome((1, 2, 3, 2, 1)), 'expected: ( 1 2 2 1 )')
@@ -95,3 +87,6 @@ def find_palindrome(pattern):
 
 # input13 = ("Able", "was", "I", "ere", "I", "saw", "Elba")
 # print('example 13:', find_palindrome(input13), 'expected: None')
+
+# input14 = tuple("ever")
+# print('example 14:', find_palindrome(input14), 'expected: ( e v e )')
