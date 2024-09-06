@@ -21,14 +21,16 @@ def delete_element(tuple, index):
 
 def find_palindrome(pattern):
 
-    if not tuple_arg(pattern):
+    if not isinstance(pattern, tuple):
         return None
 
-    if len(pattern) <= 2:                 # Returned palindrome must be at least 2 elements 
+    length = len(pattern)
+
+    if length < 3:                 # Returned palindrome must be at least 2 elements 
         return None
 
     left = 0                       
-    right = -1
+    right = length - 1
     removed = 0
     delete = None
 
@@ -44,12 +46,12 @@ def find_palindrome(pattern):
             elif pattern[left] == pattern[right - 1]:
                 delete = right
             else:                       # There is no possible palindrome with one removal
-                return None             
+                return None             # this isn't returning none!? maybe??
             
             removed += 1
 
     if removed == 0:                    # Pattern was already a palindrome, remove middle
-        delete = math.floor(len(pattern) / 2)
+        delete = math.floor(length / 2)
 
     pattern = delete_element(pattern, delete)
     return pattern
