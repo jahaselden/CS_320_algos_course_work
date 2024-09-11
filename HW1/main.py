@@ -34,7 +34,7 @@ def find_palindrome(pattern):
     removed = 0
     delete = None
 
-    while left <= right and removed < 1:
+    while left <= right and removed < 2:
         if pattern[left] == pattern[right]:   # Match? Move inward to next comparison    
             left += 1
             right -= 1
@@ -46,12 +46,17 @@ def find_palindrome(pattern):
             elif pattern[left] == pattern[right - 1]:
                 delete = right
             else:                       # There is no possible palindrome with one removal
-                return None             # this isn't returning none!? maybe??
+                return None             
             
             removed += 1
 
     if removed == 0:                    # Pattern was already a palindrome, remove middle
         delete = math.floor(length / 2)
 
-    pattern = delete_element(pattern, delete)
-    return pattern
+    if removed == 1:
+        pattern = delete_element(pattern, delete)
+        return pattern
+    
+    if removed > 1:
+        return None
+

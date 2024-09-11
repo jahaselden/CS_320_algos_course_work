@@ -28,3 +28,6 @@
 
 # input14 = tuple("ever")
 # print('example 14:', find_palindrome(input14), 'expected: ( e v e )')
+
+print('example 1:', find_palindrome((2,4,5,6,3,4)), 'expected: None') 
+print('example 1:', find_palindrome((1,2,2,3,1,2)), 'expected: None') 

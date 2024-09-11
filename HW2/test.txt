@@ -1,0 +1,19 @@
+
+
+word = ("lemon", "lime", "orange", "grapefruit")
+wordList = ("apple", "orange", "banana", "pear")
+sys.stdout.write("EXPECTED: ('lemon', 'lime', 'grapefruit') ACTUAL: ") 
+print(new_words(word, wordList))
+print()
+
+word = ("lemon", "lime", "orange", "grapefruit")
+wordList = None
+sys.stdout.write("EXPECTED: None ACTUAL: ") 
+print(new_words(word, wordList))
+print()
+
+word = 1.2
+wordList = ("apple", "orange", "banana", "pear")
+sys.stdout.write("EXPECTED: None ACTUAL: ") 
+print(new_words(word, wordList))
+print()
