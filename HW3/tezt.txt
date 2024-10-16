@@ -1,0 +1,16 @@
+
+# none_list = None
+# none_expected = None
+# print("EXPECTED: ", none_expected, "ACTUAL: ", heapsort(none_list))
+
+# empty_list = []
+# empty_expected = []
+# print("EXPECTED: ", empty_expected, "ACTUAL: ", heapsort(empty_list))
+
+# test_list = (16, 25, 14, 12, 11, 8, 15, 9, 7, 20, 5, 6, 4)
+# expected_list = sorted(test_list)
+# print("EXPECTED: ", expected_list, "ACTUAL: ", heapsort(test_list))
+
+# test_list = [7, 4, 3, 1, 7]
+# expected = [1,3,4,7,7]
+# print("EXPECTED: ", expected, "ACTUAL: ", heapsort(test_list))
